@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HigherLowerActivity">
+
+    <ImageView
+        android:id="@+id/ivDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/dice1"
+        app:layout_constraintBottom_toTopOf="@+id/txtLastthrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="395dp" />
+
+    <TextView
+        android:id="@+id/txtLastthrow"
+        android:layout_width="130dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="141dp"
+        android:text="test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDice" />
+
+    <Button
+        android:id="@+id/btnLower"
+        android:layout_width="121dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="13dp"
+        android:text="LOWER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEquals"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEquals"
+        android:layout_width="121dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="13dp"
+        android:text="EQUALS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnHigher"
+        app:layout_constraintStart_toEndOf="@+id/btnLower" />
+
+    <Button
+        android:id="@+id/btnHigher"
+        android:layout_width="115dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="14dp"
+        android:text="HIGHER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnEquals" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
